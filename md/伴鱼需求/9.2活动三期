@@ -1,0 +1,14 @@
+### 上线准备
+* apollo增加v3_activity_start
+* 数据库增加赠送课时数量字段
+```sql
+ALTER TABLE crmsysconfi18n_package ADD COLUMN `send_num` int(11) NOT NULL DEFAULT '0' COMMENT '签到活动赠课数';
+ALTER TABLE activityi18n_checkin ADD COLUMN `sendnum` int(11) NOT NULL DEFAULT '0' COMMENT '签到最大赠课数';
+```
+* 发布
+crmop,activity,acapi,crmsys
+
+导入用户课时单
+
+600031
+300000000 20000 30000
